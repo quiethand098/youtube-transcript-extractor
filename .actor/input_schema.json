@@ -1,0 +1,12 @@
+{
+  "title": "YouTube Transcript Extractor input", "type": "object", "schemaVersion": 1,
+  "properties": {
+    "videos": { "title": "Videos or playlists", "type": "array", "editor": "stringList",
+      "description": "YouTube video URLs, 11-character video IDs, or playlist URLs (first 100 videos of a playlist). Short youtu.be and /shorts/ links work.",
+      "prefill": ["https://www.youtube.com/watch?v=dQw4w9WgXcQ"] },
+    "language": { "title": "Preferred language", "type": "string", "editor": "textfield", "description": "Language code such as en, de, es. Falls back to the first available track (auto-generated tracks included).", "default": "en" },
+    "includeSegments": { "title": "Include timestamped segments", "type": "boolean", "description": "Add a segments array with start time and duration for each caption line.", "default": false },
+    "chunkChars": { "title": "RAG chunk size (characters)", "type": "integer", "description": "If above 0, output a chunks array with text split at sentence boundaries to about this size, each with its start time and a deep link. Ready for vector databases. 0 disables.", "default": 0, "minimum": 0, "maximum": 20000 }
+  },
+  "required": ["videos"]
+}

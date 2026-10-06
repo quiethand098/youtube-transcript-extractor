@@ -1,0 +1,2 @@
+{ "actorSpecification": 1, "name": "youtube-transcript-rag-extractor", "title": "YouTube Transcript Extractor: Batch, Timestamps, RAG Chunks",
+  "version": "0.1", "buildTag": "latest", "input": "./input_schema.json", "dockerfile": "./Dockerfile", "output": "./output_schema.json" }
